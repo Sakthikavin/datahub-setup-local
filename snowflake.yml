@@ -1,0 +1,31 @@
+source:
+  type: snowflake
+  config:
+    # Snowflake connection details
+    account_id: RTVJPGX-GM42890
+    username: Snowflake
+    password: Snowflake@10151
+    role: DATAHUB_SNOWFLAKE_ROLE
+    warehouse: COMPUTE_WH
+
+    # Include metadata and lineage
+    include_tables: true
+    include_views: true
+    include_table_lineage: true
+    include_view_lineage: true
+
+    # Enable profiling (requires SELECT privileges)
+    profiling:
+      enabled: true
+      profile_table_level_only: true
+
+    # Enable stateful ingestion (incremental updates)
+    stateful_ingestion:
+      enabled: true
+
+pipeline_name: "urn:li:dataHubIngestionSource:c603f176-e4f9-4b58-9c5d-6ba13f1e07d5"
+
+sink:
+  type: datahub-rest
+  config:
+    server: "http://localhost:8080"
