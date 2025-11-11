@@ -137,9 +137,9 @@ Create a file named `datasource/snowflake.yml`:
 source:
   type: snowflake
   config:
-    account_id: RTVJPGX-GM42890
-    username: Snowflake
-    password: Snowflake@10151
+    account_id: <replace snowflake account identifier>
+    username: <replace snowflake username>
+    password: <replace snowflake password>
     role: DATAHUB_SNOWFLAKE_ROLE
     warehouse: COMPUTE_WH
 
